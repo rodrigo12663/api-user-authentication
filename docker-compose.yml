@@ -7,7 +7,7 @@ services:
       - "3333:3333"
     volumes:
         - .:/home/user-authentication
-        -  /home/user-authentication/node_modules
+        -  /home/user-authentication/node_modules  
   database:
     image: postgres
     container_name: user-authentication_db

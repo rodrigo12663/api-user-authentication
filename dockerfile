@@ -1,4 +1,3 @@
- 
 FROM node:latest
 WORKDIR /home/user-authentication
 
