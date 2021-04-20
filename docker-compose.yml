@@ -8,4 +8,17 @@ services:
     volumes:
         - .:/home/user-authentication
         -  /home/user-authentication/node_modules
-
+  database:
+    image: postgres
+    container_name: user-authentication_db
+    environment:
+        POSTGRES_DB: "api-user-authentication"
+        POSTGRES_USER: "postgres"
+        POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8080:8080
