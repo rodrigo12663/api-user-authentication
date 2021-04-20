@@ -1,0 +1,11 @@
+version: "3.9"  
+services:
+  web:
+    container_name: user-authentication_api
+    build: .
+    ports:
+      - "3333:3333"
+    volumes:
+        - .:/home/user-authentication
+        -  /home/user-authentication/node_modules
+
