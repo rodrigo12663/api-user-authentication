@@ -2,7 +2,7 @@
   "name": "user-authentication",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/gabriel-leadbase/Desafio-Node.js.git",
+  "repository": "https://github.com/rodrigo12663/api-user-authentication.git",
   "author": "Rodrigo <rodrigo202145@gmail.com>",
   "license": "MIT",
   "scripts": {
