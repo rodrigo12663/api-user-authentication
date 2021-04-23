@@ -7,9 +7,10 @@ export class CreateUsers1618959582383 implements MigrationInterface {
       columns: [
         {
           name: 'id',
-          type: 'uuid',
+          type: 'varchar',
           isPrimary: true,
-          generationStrategy: 'uuid'
+          generationStrategy: 'uuid',
+          default: 'uuid_generate_v4()'
         },
         {
           name: 'name',
@@ -18,7 +19,7 @@ export class CreateUsers1618959582383 implements MigrationInterface {
         {
           name: 'cpf',
           type: 'varchar',
-          isNullable: true
+          isUnique: true
         },
         {
           name: 'password',
