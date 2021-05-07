@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm'
+import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm'
+import Role from '../../Role/entities/Role'
 
 @Entity('users')
 export default class User {
@@ -13,6 +14,10 @@ export default class User {
 
     @Column()
     password:string
+
+    @ManyToOne(() => Role)
+    @JoinColumn()
+    role: Role;
 
     @CreateDateColumn()
     createdAt:Date

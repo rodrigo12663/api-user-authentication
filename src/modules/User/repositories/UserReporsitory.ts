@@ -3,8 +3,8 @@ import User from '../entities/User'
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
-  async findByCPF (cpf: string) {
-    const user = await this.findOne(cpf)
+  async findByCpf (cpf:string): Promise<User | undefined> {
+    const user = await this.findOne({ where: { cpf } })
     return user
   }
 }
