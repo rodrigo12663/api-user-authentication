@@ -1,9 +1,10 @@
 import express from 'express'
 import 'reflect-metadata'
+import 'express-async-errors'
 import routes from '../routes/index'
 import '../typeorm'
 import cors from 'cors'
-import 'express-async-errors'
+
 import ConfigError from '../middlewares/ConfigError'
 
 const configError = new ConfigError()

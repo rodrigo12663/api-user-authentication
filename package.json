@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
     "typeorm": "ts-node-dev  node_modules/typeorm/cli.js",
-    "migrations:run": "sudo docker exec 7e5 yarn typeorm migration:run",
-    "migrations:create": "sudo docker execc 7e5 yarn typeorm migration:create -n"
+    "migrations:run": "sudo docker exec fa2 yarn typeorm migration:run",
+    "migrations:create": "sudo docker execc fa2 yarn typeorm migration:create -n"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",

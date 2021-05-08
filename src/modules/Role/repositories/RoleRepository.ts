@@ -3,8 +3,8 @@ import Role from '../entities/Role'
 
 @EntityRepository(Role)
 export default class RoleRepository extends Repository<Role> {
-  async findByRole (userId:string) {
-    const role = await this.findOne({ where: { userId } })
+  async findByName (name:string) : Promise<Role> |undefined {
+    const role = await this.findOne({ where: { name } })
     return role
   }
 }
