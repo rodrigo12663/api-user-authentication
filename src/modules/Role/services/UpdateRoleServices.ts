@@ -1,3 +1,4 @@
+import { getCustomRepository } from 'typeorm'
 import AppError from '../../../shared/errors/AppErrror'
 import Role from '../entities/Role'
 import RoleRepository from '../repositories/RoleRepository'
@@ -9,8 +10,8 @@ interface IRequest{
 }
 export default class UpdateRoleServices {
   async execute ({ id, name, description }:IRequest) :Promise<Role> {
-    const roleRepository = new RoleRepository()
-    const role = await roleRepository.findOne({ id })
+    const roleRepository = getCustomRepository(RoleRepository)
+    const role = await roleRepository.findOne(id)
 
     if (!role) {
       throw new AppError('role not found')

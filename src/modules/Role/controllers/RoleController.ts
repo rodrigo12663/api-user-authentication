@@ -38,9 +38,9 @@ export default class RoleController {
   }
 
   async update (req:Request, res: Response) :Promise<Response> {
-    const updateRoleServices = new UpdateRoleServices()
     const { id } = req.params
     const { name, description } = req.body
+    const updateRoleServices = new UpdateRoleServices()
     const role = await updateRoleServices.execute({ id, name, description })
 
     return res.json(role)
