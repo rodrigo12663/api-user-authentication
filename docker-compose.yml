@@ -1,4 +1,4 @@
-version: "3.9"  
+version: "3.3"
 services:
   web:
     container_name: user-authentication_api
@@ -6,16 +6,16 @@ services:
     ports:
       - "3333:3333"
     volumes:
-        - .:/home/user-authentication
-        -  /home/user-authentication/node_modules  
-      
+      - .:/home/user-authentication
+      - /home/user-authentication/node_modules
+
   database:
     image: postgres
     container_name: user-authentication_db
     environment:
-        POSTGRES_DB: "api-user-authentication"
-        POSTGRES_USER: "postgres"
-        POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "api-user-authentication"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
     ports:
       - "5432:5432"
   adminer:

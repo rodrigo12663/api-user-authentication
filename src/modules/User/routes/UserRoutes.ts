@@ -6,5 +6,6 @@ const userController = new UserController()
 
 userRoutes.post('/', userController.create)
 userRoutes.get('/', userController.index)
+userRoutes.put('/:id', userController.update)
 
 export default userRoutes

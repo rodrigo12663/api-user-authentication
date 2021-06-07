@@ -29,7 +29,7 @@ export default class RoleController {
     return res.json(role)
   }
 
-  async delete (req:Request, res:Response) {
+  async delete (req:Request, res:Response):Promise<Response> {
     const deleteRole = new DeleteRoleServices()
     const { id } = req.params
     await deleteRole.execute({ id })
